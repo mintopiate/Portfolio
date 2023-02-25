@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Commissioner', sans-serif;
+}
+
+.container {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    position: relative;
+    /* flex-model */
+    display: flex;  /* контент в ряд  по flex-model*/
+    flex-direction: column;  /* --> контент в колонну по flex-model*/
+    justify-content: center; /* основная ось */
+    align-items: center; /* поперечная ось */
+
+    width: 100%; 
+    height: 100vh; 
+    background-color: #72A69A;
+    background-image: url("./../images/header/header-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.25));
+}
+
+.header-title {
+    margin: 0;
+    margin-bottom: 50px;
+
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 78px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.header-subtitle {
+    margin: 0;
+    max-width: 700px;
+
+    font-weight: 100;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.header-arrow {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    bottom: 9px;
+    transform: translate(-50%, 0);
+}
+
+.portfolio {
+    padding-top: 58px;
+    padding-bottom: 58px;
+}
+
+.portfolio-header {
+    margin: 0;
+    margin-bottom: 58px;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 56px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.porfolio-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap; /*элементы переносятся*/
+    justify-content: space-between; /*элементы распределяются внутри контейнера по краям*/
+}
+
+.card {
+    margin-bottom: 37px;
+    background-color: white;
+    max-width: 340px;
+    padding: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /*4 оттенка rgb, прозрачность*/
+    border-radius: 4px;
+}
+
+ /*последний    и   второй с конца*/
+.card:last-child, .card:nth-last-child(2) {
+    margin-bottom: 0;
+}
+
+.card-img {
+    margin-bottom: 20px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.card-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.card p {
+    margin-top: 8px;
+}
+
+.footer {
+    padding-top: 35px;
+    padding-bottom: 100px;
+    /* padding-left: 100px; */
+
+    color: #FFFFFF;
+    background: #72A69A;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright-name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.copyright p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.social-profiles p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.icons {
+    display: flex;
+    align-items: center; /*выравнивание по x*/
+    padding-top: 15px;
+}
+
+/*все селекторы на первом уровне вложенности внутри класса icons:       */
+/*img   -   торой уровень вложенности, т.к. лежит в ссылке*/
+/*  "+"   выбирает элемент, у которого есть сосед слева*/
+/*то есть отступы будут только у тех элементов3, у которых есть что-то слева*/
+.icons > * + * { 
+    margin-left: 22px;
+}
+
+.contacts {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.contacts p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.footer-col {
+    max-width: 200px;
+    flex-grow: 1;
+}
